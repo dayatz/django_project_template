@@ -6,18 +6,18 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
         'NAME': os.environ.get(
-            '{{cookiecutter.project_name|upper}}_DB_NAME',
+            "{{cookiecutter.project_name|upper}}_DB_NAME",
             {{cookiecutter.project_name}}),
         'USER': os.environ.get(
-            '{{cookiecutter.project_name|upper}}_DB_USERNAME',
+            "{{cookiecutter.project_name|upper}}_DB_USERNAME",
             {{cookiecutter.project_name}}),
         'PASSWORD': os.environ.get(
-            '{{cookiecutter.project_name|upper}}_DB_PASS',
+            "{{cookiecutter.project_name|upper}}_DB_PASS",
             {{cookiecutter.project_name}}),
         'HOST': os.environ.get(
-            '{{cookiecutter.project_name|upper}}_DB_HOST', 'localhost'),
+            "{{cookiecutter.project_name|upper}}_DB_HOST", 'localhost'),
         'PORT': os.environ.get(
-            '{{cookiecutter.project_name|upper}}_DB_PORT', '')
+            "{{cookiecutter.project_name|upper}}_DB_PORT", '')
     }
 }
 
@@ -29,7 +29,7 @@ LOGGING = {
             'level': 'WARNING',
             'class': 'logging.FileHandler',
             'filename': os.path.join(os.environ.get(
-                '{{cookiecutter.project_name|upper}}_LOG_DIR'),
+                "{{cookiecutter.project_name|upper}}_LOG_DIR"),
                 os.path.join(os.path.dirname(BASE_DIR), 'log.txt')),
         },
     },
